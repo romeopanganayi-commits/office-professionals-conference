@@ -1,0 +1,16 @@
+Office Professionals Conference Website - Booking Terms Update
+
+Changed wording added:
+- Bookings are subject to availability.
+- Accommodation, airport shuttle and activity/excursion arrangements require upfront payment before reservations can be confirmed.
+- Last-minute cancellations or changes may incur supplier penalties.
+
+Files included in this patch:
+- index.html
+- dates.html
+- register.html
+- brochure.html
+- enquire.html
+- activities.html
+- README.md
+- assets/css/style.css

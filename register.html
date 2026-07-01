@@ -19,7 +19,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="brand" href="index.html" aria-label="ICL Office Professionals & Secretaries Day Conference home"><img src="assets/img/icl-logo.png" alt="Institute of Corporate Learning logo"><span>officeprofessionalsconference.co.za</span></a>
+    <a class="brand" href="index.html" aria-label="ICL Office Professionals & Secretaries Day Conference home"><img src="assets/img/icl-logo.png" alt="Institute of Corporate Learning logo"></a>
     <nav class="main-nav" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="dates.html" class="">Dates & Packages</a><a href="agenda.html" class="">Agenda</a><a href="activities.html" class="">Activities</a><a href="register.html#registration-form" class="active">Register</a><a href="brochure.html#brochure-form" class="">Brochure</a><a href="enquire.html#enquiry-form" class="">Enquire</a></nav>
     <div class="nav-cta"><a class="btn btn-outline" href="brochure.html#brochure-form">Request Brochure</a><a class="btn btn-primary" href="register.html#registration-form">Register Now</a></div>
     <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
@@ -27,7 +27,7 @@
 </header>
 <main id="main">
 
-<section class="form-hero" id="registration-form"><div class="container"><p class="pill">Secure your place</p><h1>Registration Form</h1><p>Complete the form below. ICL will confirm your booking, package selection and any accommodation or shuttle requirements.</p></div></section>
+<section class="form-hero" id="registration-form"><div class="container"><p class="pill">Secure your place</p><h1>Registration Form</h1><p>Complete the form below. ICL will confirm your booking, package selection and any accommodation, shuttle or activity requirements subject to availability.</p></div></section>
 <section class="form-section"><div class="container form-wrap">
 <form name="registration" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="big-form">
   <input type="hidden" name="form-name" value="registration">
@@ -43,11 +43,12 @@
   <div class="form-card">
     <h2>Package & Activity</h2>
     <div class="form-grid two">
-      <label>Preferred Package *<select name="package" required><option value="Conference Delegate Package">Conference Delegate Package</option><option value="Conference + 3-Star Accommodation Quote">Conference + 3-Star Accommodation Quote</option><option value="Conference + Airport Shuttle Quote">Conference + Airport Shuttle Quote</option><option value="Conference + Accommodation + Airport Shuttle Quote">Conference + Accommodation + Airport Shuttle Quote</option><option value="Group Proposal">Group Proposal</option></select></label>
+      <label>Preferred Package *<select name="package" required><option value="Conference + Selected Activity Package - R22,499 excl. VAT">Conference + Selected Activity Package - R22,499 excl. VAT</option><option value="Conference + 3-Star Accommodation - R29,999 excl. VAT">Conference + 3-Star Accommodation - R29,999 excl. VAT</option><option value="Conference + Return Airport Shuttle - R23,899 excl. VAT">Conference + Return Airport Shuttle - R23,899 excl. VAT</option><option value="Complete Package - Conference + Accommodation + Return Shuttle - R31,399 excl. VAT">Complete Package - Conference + Accommodation + Return Shuttle - R31,399 excl. VAT</option><option value="Group Proposal">Group Proposal / Custom Quote</option></select></label>
       <label>Preferred Activity / Excursion *<select name="preferred_activity" required><option value="Please recommend based on destination">Please recommend based on destination</option><option>Sun City - Game Drive</option><option>Sun City - Spa Treatment</option><option>Sun City - Boat Ride</option><option>Sun City - Valley of Waves</option><option>Cape Town - Table Mountain</option><option>Cape Town - Robben Island</option><option>Cape Town - Boat Ride</option><option>Cape Town - City Tour Red Bus</option><option>Cape Town - Spa Treatment</option></select></label>
-      <label>Accommodation Required?<select name="accommodation_required"><option>No</option><option>Yes - 3-star accommodation package</option><option>Maybe - please send options</option></select></label>
-      <label>Airport Shuttle Required?<select name="airport_shuttle_required"><option>No</option><option>Yes - airport pick-up and drop-off</option><option>Maybe - please send options</option></select></label>
+      <label>Accommodation Required?<select name="accommodation_required"><option>No</option><option>Yes - 3-star standard room, 3 nights - R7,500 excl. VAT per delegate</option><option>Yes - please quote additional nights</option><option>Maybe - please send options</option></select></label>
+      <label>Airport Shuttle Required?<select name="airport_shuttle_required"><option>No</option><option>One-way airport shuttle - R700 excl. VAT per delegate</option><option>Return airport shuttle - R1,400 excl. VAT per delegate</option><option>Maybe - please send options</option></select></label>
     </div>
+    <div class="package-summary"><strong>Pricing guide</strong><span>Conference + selected activity: R22,499 excl. VAT per delegate</span><span>Accommodation: R2,500 per night including breakfast</span><span>Airport shuttle: R700 one-way / R1,400 return per delegate</span></div><div class="booking-terms compact"><strong>Booking terms</strong><span>Bookings are subject to availability. Accommodation, shuttle and activity/excursion arrangements require upfront payment before reservations can be confirmed. Last-minute cancellations or changes may incur supplier penalties.</span></div>
   </div>
   
 <div class="form-card participant-card" data-participant="1">
@@ -66,10 +67,10 @@
 
   <label class="full-label">Special Requirements or Dietary Needs<textarea name="special_requirements" rows="4" placeholder="e.g. vegetarian meals, accessibility requirements, group activity preferences..."></textarea></label>
   <div class="payment-info-card">
-    <div><p class="eyebrow">Payment information</p><h2>Invoice and payment options</h2><p>ICL can issue an invoice after registration. Delegates may also use the secure card payment option where preferred.</p></div>
+    <div><p class="eyebrow">Payment information</p><h2>Invoice and payment options</h2><p>ICL can issue an invoice after registration. Delegates may also use the secure card payment option where preferred. Accommodation, shuttle and activity bookings are confirmed once payment for those services has been received.</p></div>
     <a class="btn btn-outline" href="https://paystack.shop/pay/vt_n5nzr40j" target="_blank" rel="noopener">Optional Secure Card Payment</a>
   </div>
-  <label class="check-line"><input type="checkbox" name="authorised" required> I confirm that I am authorised to register for this conference and accept that all fees exclude VAT unless stated otherwise.</label>
+  <label class="check-line"><input type="checkbox" name="authorised" required> I confirm that I am authorised to register for this conference and accept that all fees exclude VAT unless stated otherwise. I understand that bookings are subject to availability and that last-minute cancellations or changes may incur penalties.</label>
   <button class="btn btn-primary btn-wide" type="submit">Submit Registration</button>
 </form>
 </div></section>
@@ -100,7 +101,7 @@
       <a class="btn btn-light" href="https://paystack.shop/pay/vt_n5nzr40j" target="_blank" rel="noopener">Optional Card Payment</a>
     </div>
   </div>
-  <div class="container footer-bottom"><span>© 2026 Institute of Corporate Learning. All rights reserved.</span><span>All fees exclude VAT unless stated otherwise.</span></div>
+  <div class="container footer-bottom"><span>© 2026 Institute of Corporate Learning. All rights reserved.</span><span>All fees exclude VAT unless stated otherwise. Bookings and optional arrangements are subject to availability.</span></div>
 </footer>
 <a class="chat-bubble" href="https://wa.me/27731759758?text=Hi%20ICL%2C%20I%20would%20like%20to%20ask%20about%20the%20Office%20Professionals%20Conference" target="_blank" rel="noopener"><span>💬 Ask ICL</span><strong>Chat to ICL</strong></a>
 <script src="assets/js/main.js"></script>

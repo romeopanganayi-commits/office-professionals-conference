@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | ICL Office Professionals Conference</title>
+  <meta name="description" content="Register delegates for the ICL Office Professionals & Secretaries Day Conference in Sun City or Cape Town.">
+  <meta property="og:title" content="Register | ICL Office Professionals Conference">
+  <meta property="og:description" content="Register delegates for the ICL Office Professionals & Secretaries Day Conference in Sun City or Cape Town.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og-office-professionals.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Google Tag placeholder: add your Google tag or GTM container after connecting this domain. -->
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="ICL Office Professionals & Secretaries Day Conference home"><img src="assets/img/icl-logo.png" alt="Institute of Corporate Learning logo"><span>officeprofessionalsconference.co.za</span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="dates.html" class="">Dates & Packages</a><a href="agenda.html" class="">Agenda</a><a href="activities.html" class="">Activities</a><a href="register.html#registration-form" class="active">Register</a><a href="brochure.html#brochure-form" class="">Brochure</a><a href="enquire.html#enquiry-form" class="">Enquire</a></nav>
+    <div class="nav-cta"><a class="btn btn-outline" href="brochure.html#brochure-form">Request Brochure</a><a class="btn btn-primary" href="register.html#registration-form">Register Now</a></div>
+    <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+
+<section class="form-hero" id="registration-form"><div class="container"><p class="pill">Secure your place</p><h1>Registration Form</h1><p>Complete the form below. ICL will confirm your booking, package selection and any accommodation or shuttle requirements.</p></div></section>
+<section class="form-section"><div class="container form-wrap">
+<form name="registration" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="big-form">
+  <input type="hidden" name="form-name" value="registration">
+  <input type="hidden" name="subject" value="New Office Professionals Conference Registration - %{submissionId}">
+  <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
+  <div class="form-card">
+    <h2>Conference Selection</h2>
+    <div class="choice-grid">
+      <label class="choice-option"><input type="radio" name="cohort" value="Sun City, Rustenburg | 1-4 September 2026" checked><span><strong>Sun City, Rustenburg</strong><small>1 - 4 September 2026</small></span></label>
+      <label class="choice-option"><input type="radio" name="cohort" value="Cape Town | 1-4 December 2026"><span><strong>Cape Town</strong><small>1 - 4 December 2026</small></span></label>
+    </div>
+  </div>
+  <div class="form-card">
+    <h2>Package & Activity</h2>
+    <div class="form-grid two">
+      <label>Preferred Package *<select name="package" required><option value="Conference Delegate Package">Conference Delegate Package</option><option value="Conference + 3-Star Accommodation Quote">Conference + 3-Star Accommodation Quote</option><option value="Conference + Airport Shuttle Quote">Conference + Airport Shuttle Quote</option><option value="Conference + Accommodation + Airport Shuttle Quote">Conference + Accommodation + Airport Shuttle Quote</option><option value="Group Proposal">Group Proposal</option></select></label>
+      <label>Preferred Activity / Excursion *<select name="preferred_activity" required><option value="Please recommend based on destination">Please recommend based on destination</option><option>Sun City - Game Drive</option><option>Sun City - Spa Treatment</option><option>Sun City - Boat Ride</option><option>Sun City - Valley of Waves</option><option>Cape Town - Table Mountain</option><option>Cape Town - Robben Island</option><option>Cape Town - Boat Ride</option><option>Cape Town - City Tour Red Bus</option><option>Cape Town - Spa Treatment</option></select></label>
+      <label>Accommodation Required?<select name="accommodation_required"><option>No</option><option>Yes - 3-star accommodation package</option><option>Maybe - please send options</option></select></label>
+      <label>Airport Shuttle Required?<select name="airport_shuttle_required"><option>No</option><option>Yes - airport pick-up and drop-off</option><option>Maybe - please send options</option></select></label>
+    </div>
+  </div>
+  
+<div class="form-card participant-card" data-participant="1">
+  <div class="form-card-head"><span class="number-dot">1</span><h2>Main Participant / Contact Person</h2></div>
+  <div class="form-grid two">
+    <label>Last Name *<input name="last_name" required></label>
+    <label>First Name *<input name="first_name" required></label>
+    <label>Position / Job Title<input name="position"></label>
+    <label>Company / Organisation<input name="company"></label>
+    <label>Telephone / Mobile<input name="telephone"></label>
+    <label>Email Address *<input type="email" name="email" required></label>
+  </div>
+</div>
+<div id="additional-participants"></div>
+<button type="button" class="add-participant" data-add-participant>+ Add another participant (max 4 additional)</button>
+
+  <label class="full-label">Special Requirements or Dietary Needs<textarea name="special_requirements" rows="4" placeholder="e.g. vegetarian meals, accessibility requirements, group activity preferences..."></textarea></label>
+  <div class="payment-info-card">
+    <div><p class="eyebrow">Payment information</p><h2>Invoice and payment options</h2><p>ICL can issue an invoice after registration. Delegates may also use the secure card payment option where preferred.</p></div>
+    <a class="btn btn-outline" href="https://paystack.shop/pay/vt_n5nzr40j" target="_blank" rel="noopener">Optional Secure Card Payment</a>
+  </div>
+  <label class="check-line"><input type="checkbox" name="authorised" required> I confirm that I am authorised to register for this conference and accept that all fees exclude VAT unless stated otherwise.</label>
+  <button class="btn btn-primary btn-wide" type="submit">Submit Registration</button>
+</form>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <img src="assets/img/icl-logo.png" alt="Institute of Corporate Learning logo" class="footer-logo">
+      <p>Annual professional development conferences for secretaries, PAs, EAs, administrators and support teams.</p>
+    </div>
+    <div>
+      <h3>Conference</h3>
+      <a href="dates.html">Dates & Packages</a>
+      <a href="agenda.html">Conference Agenda</a>
+      <a href="activities.html">Activities & Excursions</a>
+      <a href="brochure.html#brochure-form">Request Brochure</a>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <a href="mailto:training@za-icl.com">training@za-icl.com</a>
+      <a href="tel:+27110576895">+27 11 057 6895</a>
+      <a href="https://wa.me/27731759758">WhatsApp: +27 73 175 9758</a>
+      <span>P.O. Box: X033, Rivonia, 2128</span>
+    </div>
+    <div>
+      <h3>Payment Details</h3>
+      <p>Bank: First National Bank<br>Account: 62695650450<br>Branch: RANDBURG | 254005<br>Swift: FIRNZAJJ<br>Type: COMMERCIAL SUITE</p>
+      <a class="btn btn-light" href="https://paystack.shop/pay/vt_n5nzr40j" target="_blank" rel="noopener">Optional Card Payment</a>
+    </div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 Institute of Corporate Learning. All rights reserved.</span><span>All fees exclude VAT unless stated otherwise.</span></div>
+</footer>
+<a class="chat-bubble" href="https://wa.me/27731759758?text=Hi%20ICL%2C%20I%20would%20like%20to%20ask%20about%20the%20Office%20Professionals%20Conference" target="_blank" rel="noopener"><span>💬 Ask ICL</span><strong>Chat to ICL</strong></a>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

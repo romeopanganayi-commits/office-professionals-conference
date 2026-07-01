@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://officeprofessionalsconference.co.za/sitemap.xml

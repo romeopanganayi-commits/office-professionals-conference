@@ -37,3 +37,9 @@ Pricing update:
 - Bookings are subject to availability.
 - Accommodation, shuttle and activity/excursion arrangements require upfront payment before reservations can be confirmed.
 - Last-minute cancellations or changes may incur supplier penalties.
+
+
+Update: Added group/team discount packages: 3-5 delegates receive 10% off, 6-9 delegates receive 15% off, and 10+ delegates receive a custom quote option.
+
+
+GA4 update: Added Google Analytics 4 measurement ID G-GZ9Q6YWM25 to all HTML pages.

@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) - GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ9Q6YWM25"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GZ9Q6YWM25');
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Enquire | ICL Office Professionals Conference</title>
@@ -33,7 +43,7 @@
   <input type="hidden" name="form-name" value="enquiry">
   <input type="hidden" name="subject" value="New Office Professionals Conference Enquiry - %{submissionId}">
   <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
-  <div class="form-card"><div class="form-grid two"><label>First Name *<input name="first_name" required></label><label>Last Name *<input name="last_name" required></label><label>Email Address *<input type="email" name="email" required></label><label>Telephone / Mobile<input name="telephone"></label><label>Organisation<input name="organisation"></label><label>Number of Delegates<select name="delegates"><option>1 delegate</option><option>2 delegates</option><option>3-5 delegates</option><option>6-10 delegates</option><option>11+ delegates</option></select></label></div><label class="full-label">How can we help? *<textarea name="message" rows="5" required placeholder="Tell us if you need accommodation at R2,500/night, one-way or return airport shuttle, group pricing or activity preferences..."></textarea></label></div>
+  <div class="form-card"><div class="form-grid two"><label>First Name *<input name="first_name" required></label><label>Last Name *<input name="last_name" required></label><label>Email Address *<input type="email" name="email" required></label><label>Telephone / Mobile<input name="telephone"></label><label>Organisation<input name="organisation"></label><label>Number of Delegates<select name="delegates"><option>1 delegate</option><option>2 delegates</option><option>3-5 delegates - 10% team discount</option><option>6-9 delegates - 15% team discount</option><option>10+ delegates - custom package</option></select></label><label>Enquiry Type<select name="enquiry_type"><option>General enquiry</option><option>Group / team discount quote</option><option>Accommodation package</option><option>Airport shuttle package</option><option>Activity / excursion options</option><option>Complete conference package</option></select></label></div><label class="full-label">How can we help? *<textarea name="message" rows="5" required placeholder="Tell us if you need a 3-5 delegate team discount, 6-9 delegate team discount, accommodation, airport shuttle, group pricing or activity preferences..."></textarea></label></div>
   <div class="booking-terms compact"><strong>Booking note</strong><span>All bookings are subject to availability. Accommodation, shuttle and activity/excursion arrangements are confirmed once payment for those services has been received. Last-minute cancellations or changes may incur supplier penalties.</span></div>
   <button class="btn btn-primary btn-wide" type="submit">Send Enquiry</button>
 </form></div></section>

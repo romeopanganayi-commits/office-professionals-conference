@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) - GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ9Q6YWM25"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GZ9Q6YWM25');
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Register | ICL Office Professionals Conference</title>
@@ -43,12 +53,13 @@
   <div class="form-card">
     <h2>Package & Activity</h2>
     <div class="form-grid two">
-      <label>Preferred Package *<select name="package" required><option value="Conference + Selected Activity Package - R22,499 excl. VAT">Conference + Selected Activity Package - R22,499 excl. VAT</option><option value="Conference + 3-Star Accommodation - R29,999 excl. VAT">Conference + 3-Star Accommodation - R29,999 excl. VAT</option><option value="Conference + Return Airport Shuttle - R23,899 excl. VAT">Conference + Return Airport Shuttle - R23,899 excl. VAT</option><option value="Complete Package - Conference + Accommodation + Return Shuttle - R31,399 excl. VAT">Complete Package - Conference + Accommodation + Return Shuttle - R31,399 excl. VAT</option><option value="Group Proposal">Group Proposal / Custom Quote</option></select></label>
+      <label>Preferred Package *<select name="package" required><option value="Conference + Selected Activity Package - R22,499 excl. VAT">Conference + Selected Activity Package - R22,499 excl. VAT</option><option value="Team Saver Package - 3-5 delegates - 10% off">Team Saver Package - 3-5 delegates - 10% off</option><option value="Team Plus Package - 6-9 delegates - 15% off">Team Plus Package - 6-9 delegates - 15% off</option><option value="Corporate Team Package - 10+ delegates - custom quote">Corporate Team Package - 10+ delegates - custom quote</option><option value="Conference + 3-Star Accommodation - R29,999 excl. VAT">Conference + 3-Star Accommodation - R29,999 excl. VAT</option><option value="Conference + Return Airport Shuttle - R23,899 excl. VAT">Conference + Return Airport Shuttle - R23,899 excl. VAT</option><option value="Complete Package - Conference + Accommodation + Return Shuttle - R31,399 excl. VAT">Complete Package - Conference + Accommodation + Return Shuttle - R31,399 excl. VAT</option><option value="Group Proposal">Group Proposal / Custom Quote</option></select></label>
+      <label>Total Number of Delegates<select name="delegate_count"><option>1 delegate</option><option>2 delegates</option><option>3 - 5 delegates</option><option>6 - 9 delegates</option><option>10+ delegates</option></select></label>
       <label>Preferred Activity / Excursion *<select name="preferred_activity" required><option value="Please recommend based on destination">Please recommend based on destination</option><option>Sun City - Game Drive</option><option>Sun City - Spa Treatment</option><option>Sun City - Boat Ride</option><option>Sun City - Valley of Waves</option><option>Cape Town - Table Mountain</option><option>Cape Town - Robben Island</option><option>Cape Town - Boat Ride</option><option>Cape Town - City Tour Red Bus</option><option>Cape Town - Spa Treatment</option></select></label>
       <label>Accommodation Required?<select name="accommodation_required"><option>No</option><option>Yes - 3-star standard room, 3 nights - R7,500 excl. VAT per delegate</option><option>Yes - please quote additional nights</option><option>Maybe - please send options</option></select></label>
       <label>Airport Shuttle Required?<select name="airport_shuttle_required"><option>No</option><option>One-way airport shuttle - R700 excl. VAT per delegate</option><option>Return airport shuttle - R1,400 excl. VAT per delegate</option><option>Maybe - please send options</option></select></label>
     </div>
-    <div class="package-summary"><strong>Pricing guide</strong><span>Conference + selected activity: R22,499 excl. VAT per delegate</span><span>Accommodation: R2,500 per night including breakfast</span><span>Airport shuttle: R700 one-way / R1,400 return per delegate</span></div><div class="booking-terms compact"><strong>Booking terms</strong><span>Bookings are subject to availability. Accommodation, shuttle and activity/excursion arrangements require upfront payment before reservations can be confirmed. Last-minute cancellations or changes may incur supplier penalties.</span></div>
+    <div class="package-summary"><strong>Pricing guide</strong><span>Conference + selected activity: R22,499 excl. VAT per delegate</span><span>Team discounts: 10% for 3-5 delegates, 15% for 6-9 delegates, custom quote for 10+ delegates</span><span>Accommodation: R2,500 per night including breakfast</span><span>Airport shuttle: R700 one-way / R1,400 return per delegate</span></div><div class="booking-terms compact"><strong>Booking terms</strong><span>Bookings are subject to availability. Accommodation, shuttle and activity/excursion arrangements require upfront payment before reservations can be confirmed. Last-minute cancellations or changes may incur supplier penalties.</span></div>
   </div>
   
 <div class="form-card participant-card" data-participant="1">
@@ -63,7 +74,7 @@
   </div>
 </div>
 <div id="additional-participants"></div>
-<button type="button" class="add-participant" data-add-participant>+ Add another participant (max 4 additional)</button>
+<button type="button" class="add-participant" data-add-participant>+ Add another participant (max 9 additional)</button>
 
   <label class="full-label">Special Requirements or Dietary Needs<textarea name="special_requirements" rows="4" placeholder="e.g. vegetarian meals, accessibility requirements, group activity preferences..."></textarea></label>
   <div class="payment-info-card">

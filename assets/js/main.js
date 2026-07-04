@@ -11,7 +11,7 @@
   let count=1;
   if(addBtn&&target){
     addBtn.addEventListener('click',()=>{
-      if(count>=5) return;
+      if(count>=10) return;
       count++;
       const div=document.createElement('div');
       div.className='form-card participant-card';
@@ -23,7 +23,7 @@
       <label>Email Address<input type="email" name="participant_${count}_email"></label>
       </div>`;
       target.appendChild(div);
-      if(count>=5) addBtn.style.display='none';
+      if(count>=10) addBtn.style.display='none';
     });
   }
   const params=new URLSearchParams(window.location.search);

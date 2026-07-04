@@ -11,3 +11,19 @@
 
 .booking-terms{margin-top:30px;display:grid;grid-template-columns:.55fr 1fr;gap:26px;align-items:center;border:1px solid #bdebd0;border-radius:28px;padding:28px;background:#f3fbf7;box-shadow:0 10px 30px rgba(16,36,63,.05)}.booking-terms h2{font-size:34px;letter-spacing:-.04em}.booking-terms p,.booking-terms span{color:#4b5563;font-size:17px;font-weight:700;margin:0}.booking-terms.compact{display:grid;grid-template-columns:1fr;gap:8px;margin:18px 0 22px;padding:18px;border-radius:20px}.booking-terms.compact strong{color:#047857;font-size:16px}.booking-terms.compact span{font-size:14px;line-height:1.5}
 @media (max-width:700px){.booking-terms{grid-template-columns:1fr;padding:22px}.booking-terms h2{font-size:28px}}
+
+/* Team discount packages */
+.team-head{margin-top:54px}
+.discount-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-bottom:34px}
+.discount-card{background:#fff;border:1px solid var(--line);border-radius:32px;padding:32px;box-shadow:var(--shadow)}
+.discount-card.featured{border-color:#68d99b;background:linear-gradient(180deg,#fff,#f3fbf7)}
+.discount-card h3{font-size:32px;letter-spacing:-.035em;margin-bottom:16px}
+.discount-value{font-size:clamp(38px,4vw,56px);line-height:1;font-weight:900;color:#047857;letter-spacing:-.06em;margin:18px 0}
+.discount-value.custom{font-size:38px;color:#10243f}
+.discount-card p{color:var(--muted);font-size:17px}
+.discount-card ul{margin:22px 0;padding-left:22px;color:#4b5563;font-size:16px}
+.discount-card li{margin-bottom:9px}
+.package-summary{display:grid;gap:8px;background:#f5faf8;border:1px solid #cfeee0;border-radius:20px;padding:18px;margin-top:22px}
+.package-summary strong{color:#10243f}
+.package-summary span{color:#4b5563;font-weight:700}
+@media (max-width:1180px){.discount-grid{grid-template-columns:1fr}}

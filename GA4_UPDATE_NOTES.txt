@@ -1,0 +1,24 @@
+Office Professionals Conference Website - GA4 Tag Update
+
+Added GA4 measurement ID:
+G-GZ9Q6YWM25
+
+Files updated:
+- index.html
+- dates.html
+- agenda.html
+- activities.html
+- register.html
+- brochure.html
+- enquire.html
+- thank-you.html
+- privacy.html
+- netlify-forms.html
+
+Upload the patch files to the ROOT of your GitHub repository and replace existing files.
+After GitHub commits, Netlify should redeploy automatically.
+
+After deployment, test:
+1. Open https://officeprofessionalsconference.co.za/
+2. Open Google Tag Assistant.
+3. Confirm the GA4 tag appears as G-GZ9Q6YWM25.

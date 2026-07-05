@@ -1,0 +1,29 @@
+# Decap CMS GitHub Backend Setup
+
+This version does not use Netlify Identity or Git Gateway.
+
+It uses Decap CMS GitHub backend:
+
+backend:
+  name: github
+  repo: romeopanganayi-commits/esg-directors-masterclass
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+Required setup:
+1. In GitHub, create an OAuth App.
+   Homepage URL: https://esgdirectorsmasterclass.co.za
+   Authorization callback URL: https://api.netlify.com/auth/done
+
+2. In Netlify, install the GitHub OAuth provider:
+   Project configuration > Access & security > OAuth > Install Provider > GitHub
+   Paste the GitHub OAuth App Client ID and Client Secret.
+
+3. Make sure the user logging in has write/push access to:
+   romeopanganayi-commits/esg-directors-masterclass
+
+4. Visit:
+   https://esgdirectorsmasterclass.co.za/admin/
+
+This avoids Netlify Identity invite/reset email issues and the Git Gateway settings error.

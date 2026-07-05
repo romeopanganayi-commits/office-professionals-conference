@@ -1,0 +1,15 @@
+# Google Ads Google Tag Added
+
+Google Ads / Google tag ID:
+GT-P8QTCP7T
+
+Installed on:
+- All public root HTML pages
+- /thank-you/index.html
+- /brochure-download/index.html
+
+Not installed on:
+- /admin CMS pages
+
+Existing GTM tracking remains installed.
+After deployment, test with Google Tag Assistant and confirm Google tag GT-P8QTCP7T is found.

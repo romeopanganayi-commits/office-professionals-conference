@@ -1,0 +1,29 @@
+# Netlify Forms Fix Checklist
+
+This version switches the website forms to native Netlify Forms submission.
+
+What changed:
+- Removed the JavaScript AJAX form submission handler.
+- Forms now submit directly to Netlify using method="POST" and data-netlify="true".
+- Registration, enquiry, in-house proposal and subscription forms redirect to /thank-you.html after a successful Netlify submission.
+- Brochure requests redirect to /brochure-download/ after a successful Netlify submission.
+- Added subject fields for clearer Netlify email notifications.
+
+After committing this package to GitHub:
+1. Wait for Netlify deploy to finish successfully.
+2. In Netlify, go to Forms and make sure Form Detection is enabled.
+3. Trigger "Clear cache and deploy site".
+4. Check Forms > Active forms. You should see:
+   - registration
+   - enquiry
+   - inhouse-proposal
+   - brochure-request
+   - subscription
+5. Set email notifications:
+   Project configuration > Notifications > Emails and webhooks > Form submission notifications > Add notification.
+6. Add notification recipient:
+   training@za-icl.com
+7. Choose either All forms or add separate notifications for registration/enquiry/inhouse-proposal/brochure-request.
+8. Submit a test registration and check:
+   Forms > registration > Verified submissions
+   and your email inbox/spam folder.

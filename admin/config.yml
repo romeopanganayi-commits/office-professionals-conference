@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: romeopanganayi-commits/esg-directors-masterclass
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://esgdirectorsmasterclass.co.za"
+display_url: "https://esgdirectorsmasterclass.co.za"
+logo_url: "/assets/img/icl-logo.png"
+
+collections:
+  - name: "settings"
+    label: "Website Settings"
+    files:
+      - name: "course_settings"
+        label: "Course Dates, Prices & Settings"
+        file: "assets/data/course-settings.json"
+        format: "json"
+        fields:
+          - { label: "Course Title", name: "courseTitle", widget: "string" }
+          - { label: "Course Duration Days", name: "courseDurationDays", widget: "number", value_type: "int", min: 1 }
+          - { label: "Number of Modules", name: "modulesCount", widget: "number", value_type: "int", min: 1 }
+          - { label: "Public Course Price", name: "publicCoursePrice", widget: "number", value_type: "int", min: 0 }
+          - { label: "Live Online Price", name: "liveOnlinePrice", widget: "number", value_type: "int", min: 0 }
+          - { label: "Currency Symbol", name: "currency", widget: "string", default: "R" }
+          - { label: "VAT Text", name: "vatText", widget: "string" }
+          - { label: "CPD Text", name: "cpdText", widget: "string" }
+          - { label: "CPD Short Text", name: "cpdShortText", widget: "string" }
+          - { label: "Paystack Payment URL", name: "paystackPaymentUrl", widget: "string" }
+          - { label: "Brochure File Path", name: "brochurePath", widget: "string" }
+          - { label: "Contact Email", name: "contactEmail", widget: "string" }
+          - { label: "Contact Phone", name: "contactPhone", widget: "string" }
+          - label: "Group Discounts"
+            name: "discounts"
+            widget: "list"
+            summary: "{{fields.delegateRange}} - {{fields.discountPercent}}%"
+            fields:
+              - { label: "Package Label", name: "label", widget: "string" }
+              - { label: "Delegate Range", name: "delegateRange", widget: "string" }
+              - { label: "Minimum Delegates", name: "minDelegates", widget: "number", value_type: "int", min: 1 }
+              - { label: "Maximum Delegates", name: "maxDelegates", widget: "number", value_type: "int", min: 1 }
+              - { label: "Discount Percentage", name: "discountPercent", widget: "number", value_type: "int", min: 0, max: 100 }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Custom Quote Instead of Auto Discount?", name: "customQuote", widget: "boolean", required: false, default: false }
+          - label: "Sessions / Dates"
+            name: "sessions"
+            widget: "list"
+            summary: "{{fields.displayLabel}}"
+            fields:
+              - { label: "Date", name: "date", widget: "string", hint: "Example: 19 - 21 August 2026" }
+              - { label: "Month Label", name: "monthLabel", widget: "string", hint: "Example: AUGUST 2026" }
+              - { label: "Location / Platform", name: "location", widget: "string", hint: "Example: Johannesburg, Cape Town, Virtual Classroom" }
+              - label: "Delivery"
+                name: "delivery"
+                widget: "select"
+                options: ["Face-to-Face", "Live Online", "In-House / Customised"]
+              - { label: "Price", name: "price", widget: "number", value_type: "int", min: 0, hint: "Use 0 for quoted/in-house sessions." }
+              - { label: "Display Label", name: "displayLabel", widget: "string", hint: "This appears in registration dropdowns." }
+              - { label: "Custom Quote?", name: "customQuote", widget: "boolean", required: false, default: false }

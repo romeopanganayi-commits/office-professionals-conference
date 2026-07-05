@@ -1,0 +1,9 @@
+Brochure download page style fix
+
+Issue:
+The brochure request was redirecting to /brochure-download/?form=brochure-request.
+That folder route could load without CSS because relative assets pointed to /brochure-download/assets/... instead of /assets/....
+
+Fix:
+Brochure forms now redirect to /brochure-download.html?form=brochure-request.
+Folder fallback pages were also updated with root-relative asset paths.

@@ -1,0 +1,16 @@
+# Decap CMS Login / Reset Link Notes
+
+Netlify Identity default invite and password-reset emails may open the site root like:
+
+https://esgdirectorsmasterclass.co.za/#recovery_token=...
+
+This package includes an early redirect script in every public page. It detects Identity tokens and immediately redirects them to:
+
+https://esgdirectorsmasterclass.co.za/admin/#recovery_token=...
+
+The `/admin/` page then opens the appropriate Netlify Identity widget flow:
+- invite_token -> signup
+- recovery_token -> password recovery
+- confirmation_token -> login
+
+After uploading this package to GitHub, allow Netlify to finish redeploying before testing a new reset email.

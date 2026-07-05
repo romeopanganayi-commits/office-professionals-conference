@@ -1,0 +1,19 @@
+FORM SCROLL FIX NOTES
+
+Updated behaviour:
+- Request Brochure links now go to brochure.html#brochure-form and auto-scroll to the brochure request form.
+- Register Now links now go to register.html#registration-form and auto-scroll to the registration form.
+- Enquiry / Request Quotation links now go to enquire.html#enquiry-form and auto-scroll to the enquiry form.
+- Subscribe links now go to subscribe.html#subscription-form and auto-scroll to the subscription form.
+- In-house proposal chatbot/request links go to inhouse.html#inhouse-form.
+- Direct same-page clicks also smooth-scroll instead of leaving the user at the top.
+- Form anchor sections include scroll margin so sticky navigation does not cover the form heading.
+
+Registration payment adjustment:
+- The Pay by Card hero button has been changed to an outline button and renamed Optional Card Payment.
+- The Pay Securely Online button in the payment card has been changed to an outline style and renamed Optional Secure Card Payment.
+
+Deploy instructions:
+1. Upload/commit the updated files to GitHub.
+2. Wait for Netlify to deploy.
+3. Test Request Brochure, Register Now, Request Quotation/Enquire, Subscribe and Request In-House Proposal links.

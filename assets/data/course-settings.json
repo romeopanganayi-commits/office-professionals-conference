@@ -1,0 +1,85 @@
+{
+  "courseTitle": "ESG Masterclass for Directors & Senior Executives",
+  "courseDurationDays": 3,
+  "modulesCount": 14,
+  "publicCoursePrice": 20999,
+  "liveOnlinePrice": 15500,
+  "currency": "R",
+  "vatText": "All fees are exclusive of VAT unless otherwise stated.",
+  "cpdText": "Earn CPD Points – Approved by the Institute of Directors South Africa (IoDSA).",
+  "cpdShortText": "CPD Points – IoDSA Approved",
+  "paystackPaymentUrl": "https://paystack.shop/pay/vt_n5nzr40j",
+  "brochurePath": "assets/documents/esg-masterclass-brochure.pdf",
+  "contactEmail": "training@za-icl.com",
+  "contactPhone": "+27 11 057 6895",
+  "discounts": [
+    {
+      "label": "Team Package",
+      "delegateRange": "3–5 Delegates",
+      "minDelegates": 3,
+      "maxDelegates": 5,
+      "discountPercent": 10,
+      "description": "Public Course: R18 899.10 per delegate. Live Online: R13 950.00 per delegate."
+    },
+    {
+      "label": "Executive Team Package",
+      "delegateRange": "6–9 Delegates",
+      "minDelegates": 6,
+      "maxDelegates": 9,
+      "discountPercent": 15,
+      "description": "Public Course: R17 849.15 per delegate. Live Online: R13 175.00 per delegate."
+    },
+    {
+      "label": "Board / EXCO Package",
+      "delegateRange": "10+ Delegates",
+      "minDelegates": 10,
+      "maxDelegates": 999,
+      "discountPercent": 0,
+      "description": "Request a tailored quotation or in-house delivery proposal for your board, EXCO, committee or leadership team.",
+      "customQuote": true
+    }
+  ],
+  "sessions": [
+    {
+      "date": "19 - 21 August 2026",
+      "monthLabel": "AUGUST 2026",
+      "location": "Johannesburg",
+      "delivery": "Face-to-Face",
+      "price": 20999,
+      "displayLabel": "19 - 21 August 2026 - Johannesburg Public Course"
+    },
+    {
+      "date": "19 - 21 August 2026",
+      "monthLabel": "AUGUST 2026",
+      "location": "Virtual Classroom",
+      "delivery": "Live Online",
+      "price": 15500,
+      "displayLabel": "19 - 21 August 2026 - Live Online"
+    },
+    {
+      "date": "16 - 18 September 2026",
+      "monthLabel": "SEPTEMBER 2026",
+      "location": "Cape Town",
+      "delivery": "Face-to-Face",
+      "price": 20999,
+      "displayLabel": "16 - 18 September 2026 - Cape Town Public Course"
+    },
+    {
+      "date": "16 - 18 September 2026",
+      "monthLabel": "SEPTEMBER 2026",
+      "location": "Virtual Classroom",
+      "delivery": "Live Online",
+      "price": 15500,
+      "displayLabel": "16 - 18 September 2026 - Live Online"
+    },
+    {
+      "date": "To be confirmed",
+      "monthLabel": "IN-HOUSE",
+      "location": "To be confirmed",
+      "delivery": "In-House / Customised",
+      "price": 0,
+      "displayLabel": "In-house proposal request",
+      "customQuote": true
+    }
+  ]
+}

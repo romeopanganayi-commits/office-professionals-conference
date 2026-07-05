@@ -1,0 +1,29 @@
+# Google Tag Manager Tracking Added
+
+Container ID: GTM-M6DVM8RG
+
+Installed:
+- GTM head script on public pages
+- GTM noscript iframe after opening body tag
+- dataLayer event tracking in assets/js/main.js
+
+Events pushed:
+- registration_submit
+- enquiry_submit
+- brochure_request
+- inhouse_proposal_request
+- subscription_submit
+- whatsapp_click
+- pay_online_click
+- phone_click
+- email_click
+- brochure_download_click
+- register_cta_click
+- enquiry_cta_click
+
+Form success redirect tracking:
+- /thank-you.html?form=registration
+- /thank-you.html?form=enquiry
+- /thank-you.html?form=inhouse-proposal
+- /thank-you.html?form=subscription
+- /brochure-download/?form=brochure-request

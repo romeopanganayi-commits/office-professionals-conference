@@ -1,0 +1,37 @@
+ESG Website - Force Correct Google Tag Patch
+
+Correct Google tag added:
+GT-P8QTCP7T
+
+This patch removes/replaces the old wrong tag:
+G-QZN054G8EE
+
+Files updated:
+- index.html
+- about.html
+- agenda.html
+- facilitators.html
+- dates.html
+- inhouse.html
+- faq.html
+- enquire.html
+- register.html
+- subscribe.html
+- thank-you.html
+- brochure.html
+- brochure-download.html
+- netlify-forms.html
+- thank-you/index.html
+- brochure-download/index.html
+
+Instructions:
+1. Upload every file in this patch to the ROOT of the ESG GitHub repository.
+2. Replace existing files when GitHub asks.
+3. Wait for Netlify to redeploy.
+4. Open view-source:https://esgdirectorsmasterclass.co.za
+5. Search for:
+   GT-P8QTCP7T
+
+Important:
+You should no longer see:
+G-QZN054G8EE

@@ -1,15 +1,4 @@
-# Route fallbacks
-/thank-you                 /thank-you/index.html             200
-/thank-you/                /thank-you/index.html             200
-/thank-you.html            /thank-you/index.html             200
-/brochure-download         /brochure-download/index.html     200
-/brochure-download/        /brochure-download/index.html     200
-/brochure-download.html    /brochure-download/index.html     200
-
-# Friendly redirects for Netlify
-/brochure-download /brochure-download.html 200
-/brochure-thank-you /brochure-download.html 200
-/thank-you /thank-you.html 200
-
-# Admin route
-/admin /admin/ 301
+/home /index.html 301
+/dates-pricing /dates.html 301
+/register-now /register.html 301
+/request-brochure /brochure.html 301

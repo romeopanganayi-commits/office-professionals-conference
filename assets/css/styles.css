@@ -1037,24 +1037,3 @@ button[disabled]{
   .cpd-callout{display:block}
   .cpd-callout strong{display:block;margin-bottom:6px}
 }
-
-
-/* Form anchor scrolling */
-.form-anchor-section{
-  scroll-margin-top:150px;
-}
-.form-card{
-  scroll-margin-top:150px;
-}
-
-/* Keep payment options visually secondary to the registration form. */
-.payment-card .btn-outline-dark.full{
-  background:#fff;
-  color:var(--navy);
-  border-color:#cfd6df;
-  box-shadow:none;
-}
-.payment-card .btn-outline-dark.full:hover{
-  border-color:var(--green);
-  color:var(--green);
-}

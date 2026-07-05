@@ -1,24 +1,31 @@
-Office Professionals Conference Website - GA4 Tag Update
+ESG Masterclass Website - GA4 Measurement ID Update
 
-Added GA4 measurement ID:
-G-GZ9Q6YWM25
+Added Google Analytics 4 measurement ID:
+G-QZN054G8EE
 
 Files updated:
 - index.html
-- dates.html
+- about.html
 - agenda.html
-- activities.html
-- register.html
-- brochure.html
+- facilitators.html
+- dates.html
+- inhouse.html
+- faq.html
 - enquire.html
+- register.html
+- subscribe.html
 - thank-you.html
-- privacy.html
+- brochure.html
+- brochure-download.html
 - netlify-forms.html
+- thank-you/index.html
+- brochure-download/index.html
+- admin/index.html
 
-Upload the patch files to the ROOT of your GitHub repository and replace existing files.
+Upload the patch files to the ROOT of your GitHub repository and replace the existing files.
 After GitHub commits, Netlify should redeploy automatically.
 
-After deployment, test:
-1. Open https://officeprofessionalsconference.co.za/
-2. Open Google Tag Assistant.
-3. Confirm the GA4 tag appears as G-GZ9Q6YWM25.
+After deployment, test using:
+1. Open https://esgdirectorsmasterclass.co.za
+2. Open Tag Assistant
+3. Confirm Google tag / GA4 shows G-QZN054G8EE

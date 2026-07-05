@@ -50,96 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     select.scrollIntoView({behavior:'smooth', block:'center'});
   }));
 
-
-  // Smooth-scroll directly to form sections when CTA links include a form anchor.
-  // This makes Request Brochure, Register Now, Enquire, Subscribe and In-House Proposal links land on the form instead of the page top.
-  const scrollToFormAnchor = (targetId, focusFirstField = true) => {
-    if (!targetId) return;
-    const target = document.querySelector(targetId);
-    if (!target) return;
-    window.setTimeout(() => {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      if (focusFirstField) {
-        const firstField = target.querySelector('input:not([type=\"hidden\"]):not([name=\"bot-field\"]), select, textarea, button[type=\"submit\"]');
-        if (firstField) firstField.focus({ preventScroll: true });
-      }
-    }, 120);
-  };
-
-  const formAnchors = new Set(['#brochure-form', '#registration-form', '#enquiry-form', '#inhouse-form', '#subscription-form']);
-  if (formAnchors.has(window.location.hash)) {
-    scrollToFormAnchor(window.location.hash);
-  }
-
-  document.addEventListener('click', (event) => {
-    const link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
-    if (!link) return;
-    const url = new URL(link.getAttribute('href'), window.location.href);
-    if (url.origin === window.location.origin && url.pathname === window.location.pathname && formAnchors.has(url.hash)) {
-      event.preventDefault();
-      history.pushState(null, '', url.hash);
-      scrollToFormAnchor(url.hash);
-    }
-  });
-
-
-  // Google Tag Manager event tracking.
-  window.dataLayer = window.dataLayer || [];
-
-  const pushTrackingEvent = (eventName, details = {}) => {
-    window.dataLayer.push({ event: eventName, ...details });
-  };
-
-  const getFormConversionEvent = (formName) => {
-    const events = {
-      registration: 'registration_submit',
-      enquiry: 'enquiry_submit',
-      'inhouse-proposal': 'inhouse_proposal_request',
-      subscription: 'subscription_submit',
-      'brochure-request': 'brochure_request'
-    };
-    return events[formName] || 'form_submit';
-  };
-
-  document.addEventListener('submit', (event) => {
-    const form = event.target && event.target.closest ? event.target.closest('form[data-netlify="true"]') : null;
-    if (!form) return;
-    const formNameInput = form.querySelector('input[name="form-name"]');
-    const formName = formNameInput ? formNameInput.value : (form.getAttribute('name') || 'form');
-    pushTrackingEvent('netlify_form_submit_attempt', { form_name: formName, conversion_event: getFormConversionEvent(formName) });
-  }, true);
-
-  const conversionParams = new URLSearchParams(window.location.search);
-  const submittedForm = conversionParams.get('form');
-  if (submittedForm) {
-    pushTrackingEvent(getFormConversionEvent(submittedForm), { form_name: submittedForm, page_path: window.location.pathname });
-  }
-
-  document.addEventListener('click', (event) => {
-    const link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
-    if (!link) return;
-    const href = link.getAttribute('href') || '';
-    const absoluteHref = link.href || href;
-    const linkText = (link.textContent || '').trim();
-
-    if (href.includes('wa.me') || href.toLowerCase().includes('whatsapp')) {
-      pushTrackingEvent('whatsapp_click', { link_url: absoluteHref, link_text: linkText });
-    } else if (href.includes('paystack.shop')) {
-      pushTrackingEvent('pay_online_click', { link_url: absoluteHref, link_text: linkText });
-    } else if (href.startsWith('tel:')) {
-      pushTrackingEvent('phone_click', { link_url: href, link_text: linkText });
-    } else if (href.startsWith('mailto:')) {
-      pushTrackingEvent('email_click', { link_url: href, link_text: linkText });
-    } else if (href.includes('esg-masterclass-brochure.pdf')) {
-      pushTrackingEvent('brochure_download_click', { link_url: absoluteHref, link_text: linkText });
-    } else if (href.includes('register.html')) {
-      pushTrackingEvent('register_cta_click', { link_url: absoluteHref, link_text: linkText });
-    } else if (href.includes('enquire.html')) {
-      pushTrackingEvent('enquiry_cta_click', { link_url: absoluteHref, link_text: linkText });
-    }
-  }, true);
-
-
   // Native Netlify Forms are used for submissions. Netlify handles POST capture and redirects.
 
   // Delegate repeater for the registration page.
@@ -313,15 +223,15 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBtn.addEventListener('click', () => setOpen(false));
 
     const responses = {
-      dates: `<strong>Dates & pricing</strong><br>19 - 21 August 2026: Johannesburg or Live Online.<br>16 - 18 September 2026: Cape Town or Live Online.<br><br>Public Course: <strong>R20 999.00 excl. VAT</strong><br>Live Online: <strong>R15 500.00 excl. VAT</strong><br><a href="register.html#registration-form">Register now</a>`,
-      quote: `<strong>Quotation request</strong><br>Yes. Complete the enquiry form or email <a href="mailto:training@za-icl.com">training@za-icl.com</a> and ICL will prepare a quotation or invoice for your selected session.<br><a href="enquire.html#enquiry-form">Request a quotation</a>`,
+      dates: `<strong>Dates & pricing</strong><br>19 - 21 August 2026: Johannesburg or Live Online.<br>16 - 18 September 2026: Cape Town or Live Online.<br><br>Public Course: <strong>R20 999.00 excl. VAT</strong><br>Live Online: <strong>R15 500.00 excl. VAT</strong><br><a href="register.html">Register now</a>`,
+      quote: `<strong>Quotation request</strong><br>Yes. Complete the enquiry form or email <a href="mailto:training@za-icl.com">training@za-icl.com</a> and ICL will prepare a quotation or invoice for your selected session.<br><a href="enquire.html">Request a quotation</a>`,
       bank: `<strong>ICL Banking Details</strong><br>Bank: First National Bank<br>Account No: 62695650450<br>Branch: RANDBURG<br>Branch Code: 254005<br>Swift Code: FIRNZAJJ<br>Account Type: COMMERCIAL SUITE<br><br>Please use your organisation name or invoice number as payment reference once invoiced.`,
       payment: `<strong>Secure online payment</strong><br>You can pay online using ICL’s secure Paystack link for card, Apple Pay and supported EFT options.<br><a href="https://paystack.shop/pay/vt_n5nzr40j" target="_blank" rel="noopener">Pay securely online</a>`,
-      discounts: `<strong>Group booking packages</strong><br>3–5 delegates: 10% discount.<br>6–9 delegates: 15% discount.<br>10+ delegates: custom quotation or in-house proposal.<br><a href="register.html#registration-form">Register a team</a>`,
+      discounts: `<strong>Group booking packages</strong><br>3–5 delegates: 10% discount.<br>6–9 delegates: 15% discount.<br>10+ delegates: custom quotation or in-house proposal.<br><a href="register.html">Register a team</a>`,
       cpd: `<strong>CPD points</strong><br>Delegates can earn CPD Points. The programme is approved by the Institute of Directors South Africa (IoDSA).`,
-      brochure: `<strong>Brochure</strong><br>Please complete the short brochure request form first. Once submitted, the download button will appear.<br><a href="brochure.html#brochure-form">Request brochure</a>`,
-      inhouse: `<strong>In-house delivery</strong><br>ICL can customise this ESG Masterclass for boards, EXCO teams, committees and senior management groups.<br><a href="inhouse.html#inhouse-form">Request an in-house proposal</a>`,
-      contact: `<strong>Contact ICL</strong><br>Email: <a href="mailto:training@za-icl.com">training@za-icl.com</a><br>Tel: <a href="tel:+27110576895">+27 11 057 6895</a><br>WhatsApp: <a href="https://wa.me/27731759758" target="_blank" rel="noopener">+27 73 175 9758</a><br><a href="enquire.html#enquiry-form">Send an enquiry</a>`
+      brochure: `<strong>Brochure</strong><br>Please complete the short brochure request form first. Once submitted, the download button will appear.<br><a href="brochure.html">Request brochure</a>`,
+      inhouse: `<strong>In-house delivery</strong><br>ICL can customise this ESG Masterclass for boards, EXCO teams, committees and senior management groups.<br><a href="inhouse.html">Request an in-house proposal</a>`,
+      contact: `<strong>Contact ICL</strong><br>Email: <a href="mailto:training@za-icl.com">training@za-icl.com</a><br>Tel: <a href="tel:+27110576895">+27 11 057 6895</a><br>WhatsApp: <a href="https://wa.me/27731759758" target="_blank" rel="noopener">+27 73 175 9758</a><br><a href="enquire.html">Send an enquiry</a>`
     };
 
     bot.querySelectorAll('[data-reply]').forEach(btn => btn.addEventListener('click', () => {
@@ -381,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ${card.publicPrice ? `<strong data-course-public-price-long>${formatCurrencyLong(card.publicPrice)}</strong><small>Public Course • excl. VAT</small>` : ''}
         ${card.livePrice ? `<strong class="online-price" data-course-live-price-long>${formatCurrencyLong(card.livePrice)}</strong><small>Live Online • excl. VAT</small>` : ''}
         <ul><li>${settings.courseDurationDays || 3}-day ESG Masterclass</li><li>ICL Certificate of Completion</li><li>Course materials included</li></ul>
-        <a class="btn btn-green full" href="register.html#registration-form">Register Now →</a>
+        <a class="btn btn-green full" href="register.html">Register Now →</a>
       </article>`;
     }).join('');
   };

@@ -1,0 +1,29 @@
+ESG Masterclass Website - Google Tag Update
+
+Added Google tag:
+GT-P8QTCP7T
+
+Base package used:
+icl-esg-masterclass-website-whatsapp-ga4.zip
+
+Files updated:
+- index.html
+- about.html
+- agenda.html
+- facilitators.html
+- dates.html
+- inhouse.html
+- faq.html
+- enquire.html
+- register.html
+- subscribe.html
+- thank-you.html
+- brochure.html
+- brochure-download.html
+- netlify-forms.html
+- thank-you/index.html
+- brochure-download/index.html
+
+Upload the patch files to the ROOT of your GitHub repository and replace existing files.
+After Netlify redeploys, test with Google Tag Assistant and confirm it finds:
+GT-P8QTCP7T

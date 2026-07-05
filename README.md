@@ -180,11 +180,8 @@ WhatsApp update:
 - WhatsApp display number changed to +27 73 175 9758
 - Office telephone number remains unchanged where used as a normal phone contact.
 
-Google Tag Manager update:
-- Added GTM container GTM-M6DVM8RG to all public pages.
-- Added dataLayer conversion/click events for ads tracking.
+
+GA4 update: Added Google Analytics measurement ID G-QZN054G8EE to all HTML pages.
 
 
-Google Ads tag update:
-- Added Google Ads Google tag GT-P8QTCP7T to all public pages.
-- Existing GTM tracking remains installed.
+Google tag update: Added Google tag GT-P8QTCP7T to all public HTML pages.

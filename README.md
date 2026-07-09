@@ -43,3 +43,7 @@ Update: Added group/team discount packages: 3-5 delegates receive 10% off, 6-9 d
 
 
 GA4 update: Added Google Analytics 4 measurement ID G-GZ9Q6YWM25 to all HTML pages.
+
+
+## GA4 lead conversion tracking
+Successful Netlify Form submissions redirect to the thank-you page with a form type in the URL. The thank-you page fires `generate_lead` and a form-specific GA4 event. Use `generate_lead` as the primary Google Ads conversion, and use the form-specific events for reporting by enquiry type.

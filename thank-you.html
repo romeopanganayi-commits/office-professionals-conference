@@ -10,6 +10,53 @@
 
     gtag('config', 'G-GZ9Q6YWM25');
   </script>
+  <script>
+    // Manual lead conversion tracking for Netlify Forms.
+    // Fires on the thank-you page after a real form submission redirect.
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var formType = params.get('form');
+      var allowedForms = ['registration', 'brochure', 'enquiry'];
+
+      if (!formType || allowedForms.indexOf(formType) === -1) return;
+
+      // Avoid accidental double-counting from quick refresh/back-forward reloads.
+      var storageKey = 'icl_office_professionals_conversion_' + formType;
+      var now = Date.now();
+      var lastTracked = Number(sessionStorage.getItem(storageKey) || 0);
+      if (lastTracked && (now - lastTracked) < 30000) return;
+      sessionStorage.setItem(storageKey, String(now));
+
+      var formLabels = {
+        registration: 'Office Professionals Registration',
+        brochure: 'Office Professionals Brochure Request',
+        enquiry: 'Office Professionals Enquiry'
+      };
+
+      var specificEvents = {
+        registration: 'office_registration_submit',
+        brochure: 'office_brochure_request',
+        enquiry: 'office_enquiry_submit'
+      };
+
+      var eventParams = {
+        event_category: 'Lead',
+        event_label: formLabels[formType],
+        form_name: formType,
+        lead_type: formType,
+        page_location: window.location.href,
+        send_to: 'G-GZ9Q6YWM25'
+      };
+
+      if (typeof gtag === 'function') {
+        // Recommended GA4 event for leads. Mark/import this as the main conversion.
+        gtag('event', 'generate_lead', eventParams);
+
+        // Specific event makes it easier to see exactly which form converted.
+        gtag('event', specificEvents[formType], eventParams);
+      }
+    })();
+  </script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -22,3 +22,16 @@ After deployment, test:
 1. Open https://officeprofessionalsconference.co.za/
 2. Open Google Tag Assistant.
 3. Confirm the GA4 tag appears as G-GZ9Q6YWM25.
+
+
+Lead conversion tracking update:
+- register.html now redirects successful submissions to /thank-you.html?form=registration
+- brochure.html now redirects successful submissions to /thank-you.html?form=brochure
+- enquire.html now redirects successful submissions to /thank-you.html?form=enquiry
+- thank-you.html now fires the recommended GA4 event generate_lead plus a form-specific event:
+  - office_registration_submit
+  - office_brochure_request
+  - office_enquiry_submit
+
+After deployment, submit a test form and check GA4 Realtime for generate_lead.
+Mark generate_lead as a Key Event in GA4 and import it into Google Ads as the primary lead conversion.

@@ -47,3 +47,6 @@ GA4 update: Added Google Analytics 4 measurement ID G-GZ9Q6YWM25 to all HTML pag
 
 ## GA4 lead conversion tracking
 Successful Netlify Form submissions redirect to the thank-you page with a form type in the URL. The thank-you page fires `generate_lead` and a form-specific GA4 event. Use `generate_lead` as the primary Google Ads conversion, and use the form-specific events for reporting by enquiry type.
+# Upcoming-session statement
+
+The brochure confirmation page reads the session cards on `dates.html` and selects the earliest start date that is today or later in `Africa/Johannesburg`. Keep each card's date label in `D - D Month YYYY` format (for example, `1 - 4 September 2027`) and its destination in the `h2`. Updating these published cards updates the confirmation statement automatically. Past sessions are skipped; when no upcoming session is listed or the schedule cannot load, a general message directs visitors to Dates & Packages. The downloaded PDFs remain the Cape Town December 2026 versions; a note appears when the next session differs.

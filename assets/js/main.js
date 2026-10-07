@@ -27,6 +27,10 @@
     });
   }
   const params=new URLSearchParams(window.location.search);
+  const brochureResources=document.querySelector('[data-brochure-resources]');
+  if(brochureResources && params.get('form')==='brochure'){
+    brochureResources.hidden=false;
+  }
   const cohort=params.get('cohort');
   if(cohort){
     const selector=cohort.toLowerCase().includes('cape') ? 'Cape Town' : 'Sun City';

@@ -27,3 +27,12 @@
 .package-summary strong{color:#10243f}
 .package-summary span{color:#4b5563;font-weight:700}
 @media (max-width:1180px){.discount-grid{grid-template-columns:1fr}}
+
+.brochure-resources{max-width:900px;margin:40px auto}
+.brochure-resources h2{font-size:clamp(28px,4vw,38px);letter-spacing:-.03em}
+.thank-you .brochure-resources p{font-size:18px}
+.resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:26px;text-align:left}
+.resource-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:26px;padding:28px;background:#f2fbf6}
+.resource-card h3{font-size:25px}
+.resource-card .btn{margin-top:auto;align-self:flex-start}
+@media (max-width:700px){.resource-grid{grid-template-columns:1fr}.resource-card .btn{align-self:stretch}.thank-you:has(.brochure-resources:not([hidden])){padding:70px 0}}

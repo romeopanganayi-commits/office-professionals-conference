@@ -33,6 +33,14 @@
   l.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
   document.head.appendChild(l);
 
+  // Direct brochure downloads (no form)
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-track="brochure"]');
+    if (!a) return;
+    window.gtag('event', 'conversion', { send_to: ADS.brochure, form_name: 'brochure-download' });
+    window.lintrk('track', { conversion_id: LI.brochure });
+  });
+
   // Conversions on thank-you pages
   var path = location.pathname;
   var form = new URLSearchParams(location.search).get('form');

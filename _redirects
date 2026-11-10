@@ -2,3 +2,6 @@
 /dates-pricing /dates.html 301
 /register-now /register.html 301
 /request-brochure /brochure.html 301
+/brochure-download /brochure.html 301!
+/brochure-download/ /brochure.html 301!
+/brochure-download.html /brochure.html 301!

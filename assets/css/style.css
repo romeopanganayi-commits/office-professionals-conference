@@ -39,3 +39,11 @@
 
 @media (min-width: 1181px){.dates-grid{grid-template-columns:repeat(3,1fr)}.dates-grid .date-card h2{font-size:30px}}
 @media (min-width: 900px){.choice-grid:has(input[name="cohort"]){grid-template-columns:repeat(3,1fr)}}
+.speaker-card{display:grid;grid-template-columns:260px 1fr;gap:44px;align-items:center;background:#fff;border:1px solid #dbe7df;border-radius:32px;padding:36px;box-shadow:var(--shadow)}
+.speaker-card img{width:260px;height:260px;border-radius:50%;object-fit:cover;border:8px solid #e6f9ed}
+.speaker-card h2{font-size:clamp(32px,4vw,46px);letter-spacing:-.04em}
+.speaker-role{color:#047857;font-weight:900;margin:10px 0 16px}
+.speaker-card p{color:#374151;font-size:18px}
+.speaker-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.speaker-tags span{background:#e6f9ed;color:#047857;border-radius:999px;padding:8px 14px;font-weight:800;font-size:14px}
+@media (max-width:800px){.speaker-card{grid-template-columns:1fr;text-align:center;padding:26px}.speaker-card img{margin:0 auto;width:200px;height:200px}.speaker-tags{justify-content:center}}

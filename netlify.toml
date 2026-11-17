@@ -1,8 +1,2 @@
 [build]
   publish = "."
-
-# Lets Outlook (lead replies) fetch the brochure PDFs so they can be attached to emails.
-[[headers]]
-  for = "/assets/documents/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
